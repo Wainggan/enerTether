@@ -1,7 +1,25 @@
 {
-  "FolderOrderSettings": [],
+  "FolderOrderSettings": [
+    {"name":"entities","order":16,"path":"folders/entities.yy",},
+    {"name":"graphics","order":7,"path":"folders/graphics.yy",},
+    {"name":"dev","order":2,"path":"folders/graphics/dev.yy",},
+    {"name":"rooms","order":17,"path":"folders/rooms.yy",},
+  ],
   "ResourceOrderSettings": [
+    {"name":"rm_content_parent","order":2,"path":"rooms/rm_content_parent/rm_content_parent.yy",},
+    {"name":"tl_editorTiles","order":1,"path":"tilesets/tl_editorTiles/tl_editorTiles.yy",},
+    {"name":"input","order":19,"path":"objects/input/input.yy",},
+    {"name":"rm_content_1","order":1,"path":"rooms/rm_content_1/rm_content_1.yy",},
+    {"name":"scr_gamestate","order":10,"path":"scripts/scr_gamestate/scr_gamestate.yy",},
+    {"name":"scr_useful","order":14,"path":"scripts/scr_useful/scr_useful.yy",},
+    {"name":"scr_def_macros","order":12,"path":"scripts/scr_def_macros/scr_def_macros.yy",},
+    {"name":"scr_game","order":9,"path":"scripts/scr_game/scr_game.yy",},
+    {"name":"scr_input","order":18,"path":"scripts/scr_input/scr_input.yy",},
     {"name":"game","order":2,"path":"objects/game/game.yy",},
-    {"name":"rm_startup","order":1,"path":"rooms/rm_startup/rm_startup.yy",},
+    {"name":"scr_log","order":13,"path":"scripts/scr_log/scr_log.yy",},
+    {"name":"scr_def_entities","order":11,"path":"scripts/scr_def_entities/scr_def_entities.yy",},
+    {"name":"scr_Win","order":3,"path":"scripts/scr_Win/scr_Win.yy",},
+    {"name":"scr_Wall","order":2,"path":"scripts/scr_Wall/scr_Wall.yy",},
+    {"name":"scr_Player","order":1,"path":"scripts/scr_Player/scr_Player.yy",},
   ],
 }
