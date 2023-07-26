@@ -22,8 +22,23 @@ function Player(_state, _x, _y) : Entity(_state, _x, _y) constructor {
 		
 		for (var i = 0; i < array_length(_points); i++) {
 			
+			if is_instanceof(_points[i], WinEnd) {
+				var _tailIsWin = (_points[i].x == trail[0].x && _points[i].y == trail[0].y)
+				var _headIsWin = (_points[i].x == array_last(trail).x && _points[i].y == array_last(trail).y)
+				
+				if _tailIsWin || _headIsWin continue
+				else return false
+			}
+			
+			if is_instanceof(_points[i], WinHead) {
+				var _headIsWin = (_points[i].x == array_last(trail).x && _points[i].y == array_last(trail).y)
+				
+				if _headIsWin continue
+				else return false
+			}
+			
 			var _check = false
-			for (var j = 0; j < array_length(trail); j++) {
+			for (var j = 0; j < array_length(trail); j++) {	
 				if _points[i].x == trail[j].x && _points[i].y == trail[j].y {
 					_check = true
 					break
@@ -84,8 +99,6 @@ function Player(_state, _x, _y) : Entity(_state, _x, _y) constructor {
 		
 			array_push(trail, { x, y })
 		}
-		
-		show_debug_message(checkWin())
 		
 	}
 	

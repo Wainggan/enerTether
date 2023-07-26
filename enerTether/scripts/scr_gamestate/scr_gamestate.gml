@@ -69,15 +69,12 @@ function GameState() constructor {
 	}
 	
 	static update = function(_delta) {
-		
 		for (var i = 0; i < array_length(entities); i++) {
 			entities[i].onstep(_delta)
 		}
-		
 	}
 	
 	static draw = function(_delta) {
-		
 		for (var i = 0; i < array_length(entities); i++) {
 			var _lastC = draw_get_color()
 			
@@ -85,7 +82,6 @@ function GameState() constructor {
 		
 			draw_set_color(_lastC)
 		}
-		
 	}
 	
 }
