@@ -7,10 +7,14 @@ if !surface_exists(surface) surface = surface_create(_win_w * scale, _win_h * sc
 if	_win_w != surface_get_width(application_surface) ||
 	_win_h != surface_get_height(application_surface) 
 {
+	log_debug($"Object-game.predraw: resizing to w{_win_w},h{_win_h}")
+	
 	surface_resize(application_surface, _win_w, _win_h)
 	display_set_gui_size(_win_w, _win_h)
 	
 	surface_resize(surface, _win_w * scale, _win_h * scale)
+	
+	log_info($"Object-game.predraw: resized to w{_win_w},h{_win_h}!")
 }
 
 

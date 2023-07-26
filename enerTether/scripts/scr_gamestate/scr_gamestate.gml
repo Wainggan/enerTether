@@ -22,9 +22,13 @@ function GameState() constructor {
 		
 		for (var ix = 0; ix < width; ix++) {
 			for (var iy = 0; iy < height; iy++) {
-				var _Type = entity_deindex(tilemap_get(_tilemap, ix, iy))
+				var _tile = tilemap_get(_tilemap, ix, iy)
+				var _Type = entity_deindex(_tile)
 				
-				if _Type == undefined continue
+				if _Type == undefined {
+					if _tile != eEntity.Null log_warning($"GameState.setup: unknown tile type {_tile}")
+					continue
+				}
 				
 				var _e = new _Type(self, ix, iy)
 				
@@ -32,6 +36,8 @@ function GameState() constructor {
 				
 			}
 		}
+		
+		log_info("GameState.setup: finished successfully??")
 		
 		return self
 		

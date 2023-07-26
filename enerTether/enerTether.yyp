@@ -25,6 +25,7 @@
     "IDEVersion": "2023.6.0.89",
   },
   "resources": [
+    {"id":{"name":"scr_log","path":"scripts/scr_log/scr_log.yy",},},
     {"id":{"name":"rm_content_parent","path":"rooms/rm_content_parent/rm_content_parent.yy",},},
     {"id":{"name":"spr_editorTiles","path":"sprites/spr_editorTiles/spr_editorTiles.yy",},},
     {"id":{"name":"tl_editorTiles","path":"tilesets/tl_editorTiles/tl_editorTiles.yy",},},
@@ -36,7 +37,6 @@
     {"id":{"name":"scr_game","path":"scripts/scr_game/scr_game.yy",},},
     {"id":{"name":"scr_input","path":"scripts/scr_input/scr_input.yy",},},
     {"id":{"name":"game","path":"objects/game/game.yy",},},
-    {"id":{"name":"scr_log","path":"scripts/scr_log/scr_log.yy",},},
     {"id":{"name":"scr_def_entities","path":"scripts/scr_def_entities/scr_def_entities.yy",},},
     {"id":{"name":"scr_Entity","path":"scripts/scr_Entity/scr_Entity.yy",},},
     {"id":{"name":"scr_Win","path":"scripts/scr_Win/scr_Win.yy",},},

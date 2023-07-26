@@ -6,6 +6,7 @@
     {"name":"rooms","order":17,"path":"folders/rooms.yy",},
   ],
   "ResourceOrderSettings": [
+    {"name":"scr_log","order":20,"path":"scripts/scr_log/scr_log.yy",},
     {"name":"rm_content_parent","order":2,"path":"rooms/rm_content_parent/rm_content_parent.yy",},
     {"name":"tl_editorTiles","order":1,"path":"tilesets/tl_editorTiles/tl_editorTiles.yy",},
     {"name":"input","order":19,"path":"objects/input/input.yy",},
@@ -16,7 +17,6 @@
     {"name":"scr_game","order":9,"path":"scripts/scr_game/scr_game.yy",},
     {"name":"scr_input","order":18,"path":"scripts/scr_input/scr_input.yy",},
     {"name":"game","order":2,"path":"objects/game/game.yy",},
-    {"name":"scr_log","order":13,"path":"scripts/scr_log/scr_log.yy",},
     {"name":"scr_def_entities","order":11,"path":"scripts/scr_def_entities/scr_def_entities.yy",},
     {"name":"scr_Win","order":3,"path":"scripts/scr_Win/scr_Win.yy",},
     {"name":"scr_Wall","order":2,"path":"scripts/scr_Wall/scr_Wall.yy",},
