@@ -78,7 +78,7 @@ function Player(_state, _x, _y) : Entity(_state, _x, _y) constructor {
 		var _kr = false, _kh = 0, _kv = 0
 		
 		// god
-		_kr = input.check_stutter("reverse", 12, 4)
+		_kr = input.check_stutter("reverse", 10, 3)
 		if !_kr {
 			_kh = input.check_stutter("right", 8, 6) - input.check_stutter("left", 8, 6)
 			if _kh == 0
@@ -147,31 +147,31 @@ function Player(_state, _x, _y) : Entity(_state, _x, _y) constructor {
 			draw_circle(
 				wtsR_x(trail[i].x + 0.5) - 1, wtsR_y(trail[i].y + 0.5) - 1, 
 				(i == 0 ? _HEADWIDTH : _TAILWIDTH) / 2 * game.camera.zoom, false
-			);
+			)
 			draw_line_width(
 				wtsR_x(trail[i].x + 0.5) - 1, wtsR_y(trail[i].y + 0.5) - 1,
 				wtsR_x(trail[i + 1].x + 0.5) - 1, wtsR_y(trail[i + 1].y + 0.5) - 1,
 				_TAILWIDTH * game.camera.zoom
-			);
+			)
 			
 		}
 		
 		draw_circle(
 			wtsR_x(x + 0.5) - 1, wtsR_y(y + 0.5) - 1, 
 			_HEADWIDTH / 2 * game.camera.zoom, false
-		);
+		)
 		
 		draw_set_color(#2222ff)
 		
 		draw_circle(
 			wtsR_x(x + 0.5) - 1, wtsR_y(y + 0.5) - 1, 
 			0.2 / 2 * game.camera.zoom, false
-		);
+		)
 		if array_length(trail) > 1 {
 			draw_circle(
 				wtsR_x(trail[0].x + 0.5) - 1, wtsR_y(trail[0].y + 0.5) - 1, 
 				0.2 / 2 * game.camera.zoom, true
-			);
+			)
 		}
 		
 	}

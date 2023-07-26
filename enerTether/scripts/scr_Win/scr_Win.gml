@@ -10,7 +10,7 @@ function Win(_state, _x, _y) : Entity(_state, _x, _y) constructor {
 			wtsR_x(x + 0.5) - 1, wtsR_y(y + 0.5) - 1, 
 			0.8 / 2 * game.camera.zoom,
 			true
-		);
+		)
 	}
 	
 }
@@ -27,12 +27,12 @@ function WinEnd(_state, _x, _y) : Win(_state, _x, _y) constructor {
 			wtsR_x(x + 0.5) - 1, wtsR_y(y + 0.5) - 1, 
 			0.8 / 2 * game.camera.zoom,
 			true
-		);
+		)
 		draw_circle(
 			wtsR_x(x + 0.5) - 1, wtsR_y(y + 0.5) - 1, 
 			0.3 / 2 * game.camera.zoom,
 			true
-		);
+		)
 	}
 	
 }
@@ -48,12 +48,12 @@ function WinHead(_state, _x, _y) : Win(_state, _x, _y) constructor {
 			wtsR_x(x + 0.5) - 1, wtsR_y(y + 0.5) - 1, 
 			0.8 / 2 * game.camera.zoom,
 			true
-		);
+		)
 		draw_circle(
 			wtsR_x(x + 0.5) - 1, wtsR_y(y + 0.5) - 1, 
 			0.3 / 2 * game.camera.zoom,
 			false
-		);
+		)
 	}
 	
 }

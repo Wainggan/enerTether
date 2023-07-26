@@ -23,7 +23,7 @@ function Entity(_state, _x = 0, _y = 0) constructor {
 			wtsR_x(x + _pad), wtsR_y(y + _pad), 
 			wtsR_x(x + 1 - _pad * 2), wtsR_y(y + 1 - _pad * 2), 
 			true
-		);
+		)
 	}
 	
 }
