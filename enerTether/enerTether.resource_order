@@ -8,10 +8,12 @@
   "ResourceOrderSettings": [
     {"name":"scr_log","order":20,"path":"scripts/scr_log/scr_log.yy",},
     {"name":"rm_content_parent","order":2,"path":"rooms/rm_content_parent/rm_content_parent.yy",},
+    {"name":"scr_Invalid","order":4,"path":"scripts/scr_Invalid/scr_Invalid.yy",},
     {"name":"tl_editorTiles","order":1,"path":"tilesets/tl_editorTiles/tl_editorTiles.yy",},
     {"name":"input","order":19,"path":"objects/input/input.yy",},
     {"name":"rm_content_1","order":1,"path":"rooms/rm_content_1/rm_content_1.yy",},
     {"name":"scr_gamestate","order":10,"path":"scripts/scr_gamestate/scr_gamestate.yy",},
+    {"name":"scr_Box","order":5,"path":"scripts/scr_Box/scr_Box.yy",},
     {"name":"scr_useful","order":14,"path":"scripts/scr_useful/scr_useful.yy",},
     {"name":"scr_def_macros","order":12,"path":"scripts/scr_def_macros/scr_def_macros.yy",},
     {"name":"scr_game","order":9,"path":"scripts/scr_game/scr_game.yy",},

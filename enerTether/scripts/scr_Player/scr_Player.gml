@@ -17,21 +17,22 @@ function Player(_state, _x, _y) : Entity(_state, _x, _y) constructor {
 	
 	///@desc checks to see if the player overlaps all "win" tiles correctly
 	static checkWin = function () {
+
+		var _winTiles = state.get(Win)
 		
-		var _points = state.get(Win)
-		
-		for (var i = 0; i < array_length(_points); i++) {
+		for (var i = 0; i < array_length(_winTiles); i++) {
+			var _p = _winTiles[i]
 			
-			if is_instanceof(_points[i], WinEnd) {
-				var _tailIsWin = (_points[i].x == trail[0].x && _points[i].y == trail[0].y)
-				var _headIsWin = (_points[i].x == array_last(trail).x && _points[i].y == array_last(trail).y)
+			if is_instanceof(_p, WinEnd) {
+				var _tailIsWin = (_p.x == trail[0].x && _p.y == trail[0].y)
+				var _headIsWin = (_p.x == array_last(trail).x && _p.y == array_last(trail).y)
 				
 				if _tailIsWin || _headIsWin continue
 				else return false
 			}
 			
-			if is_instanceof(_points[i], WinHead) {
-				var _headIsWin = (_points[i].x == array_last(trail).x && _points[i].y == array_last(trail).y)
+			if is_instanceof(_p, WinHead) {
+				var _headIsWin = (_p.x == array_last(trail).x && _p.y == array_last(trail).y)
 				
 				if _headIsWin continue
 				else return false
@@ -39,7 +40,7 @@ function Player(_state, _x, _y) : Entity(_state, _x, _y) constructor {
 			
 			var _check = false
 			for (var j = 0; j < array_length(trail); j++) {	
-				if _points[i].x == trail[j].x && _points[i].y == trail[j].y {
+				if _p.x == trail[j].x && _p.y == trail[j].y {
 					_check = true
 					break
 				}
@@ -49,6 +50,25 @@ function Player(_state, _x, _y) : Entity(_state, _x, _y) constructor {
 			
 		}
 		
+		
+		var _evilTiles = state.get(Invalid)
+		
+		for (var i = 0; i < array_length(_evilTiles); i++) {
+			var _p = _evilTiles[i]
+
+			var _check = false
+			for (var j = 0; j < array_length(trail); j++) {	
+				if _p.x == trail[j].x && _p.y == trail[j].y {
+					_check = true
+					break
+				}
+			}
+			
+			if _check return false
+			
+		}
+
+
 		return true
 		
 	}
@@ -73,7 +93,9 @@ function Player(_state, _x, _y) : Entity(_state, _x, _y) constructor {
 			y = array_last(trail).y
 		}
 		
-		if state.collision(x + _kh, y + _kv) {
+		var _col = state.collision(x + _kh, y + _kv)
+		
+		if _col == self {
 			
 			if array_length(trail) > 1 {
 				var _t = trail[array_length(trail) - 2]
@@ -92,6 +114,17 @@ function Player(_state, _x, _y) : Entity(_state, _x, _y) constructor {
 					array_push(trail, { x, y })
 				}
 			}
+			
+		} else if is_instanceof(_col, Box) { // attempt to push box
+			var _move = _col.push(_kh, _kv)
+			
+			if _move {
+				x += _kh
+				y += _kv
+					
+				array_push(trail, { x, y })
+			}
+		} else if _col { // if anything is in the way, just don't move
 			
 		} else {
 			x += _kh

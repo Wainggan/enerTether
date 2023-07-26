@@ -44,7 +44,7 @@ function GameState() constructor {
 		
 	}
 
-	///@arg {Struct.Entity, Function} _type
+	///@arg {Struct.Entity, Function, Array<Function>} _type
 	///@return {Array<Struct.Entity>}
 	static get = function (_type) {
 		var _out = []
@@ -55,17 +55,21 @@ function GameState() constructor {
 			return _out
 		}
 		// assume the type is a constructor
-		for (var i = 0; i < array_length(entities); i++) {
-			if is_instanceof(entities[i], _type) array_push(_out, entities[i])
+		if !is_array(_type) _type = [_type]
+		for (var i = 0; i < array_length(_type); i++) {
+			for (var j = 0; j < array_length(entities); j++) {
+				if is_instanceof(entities[j], _type[i]) array_push(_out, entities[j])
+			}
 		}
 		return _out
 	}
 	
+	///@return {Struct.Entity, Undefined}
 	static collision = function (_x, _y) {
 		for (var i = 0; i < array_length(entities); i++) {
-			if entities[i].collision(_x, _y) return true
+			if entities[i].collision(_x, _y) return entities[i]
 		}
-		return false
+		return undefined
 	}
 	
 	static update = function(_delta) {

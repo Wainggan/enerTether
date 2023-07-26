@@ -12,12 +12,11 @@ enum eEntity {
 	Hole
 }
 
-global.entities = {}
-
 /// @desc register an entity
 /// @param _entityID	entity type id
 /// @param _entityType	entity constructor
 function entity_register(_entityID, _entityType) {
+	if !variable_global_exists("entities") global.entities = {}
 	global.entities[$ _entityID] = _entityType
 }
 
