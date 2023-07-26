@@ -15,6 +15,29 @@ function Player(_state, _x, _y) : Entity(_state, _x, _y) constructor {
 		
 	}
 	
+	///@desc checks to see if the player overlaps all "win" tiles correctly
+	static checkWin = function () {
+		
+		var _points = state.get(Win)
+		
+		for (var i = 0; i < array_length(_points); i++) {
+			
+			var _check = false
+			for (var j = 0; j < array_length(trail); j++) {
+				if _points[i].x == trail[j].x && _points[i].y == trail[j].y {
+					_check = true
+					break
+				}
+			}
+			
+			if !_check return false
+			
+		}
+		
+		return true
+		
+	}
+	
 	static onstep = function(_k) {
 		
 		var _kr = false, _kh = 0, _kv = 0
@@ -61,6 +84,8 @@ function Player(_state, _x, _y) : Entity(_state, _x, _y) constructor {
 		
 			array_push(trail, { x, y })
 		}
+		
+		show_debug_message(checkWin())
 		
 	}
 	

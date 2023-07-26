@@ -26,7 +26,8 @@ function GameState() constructor {
 				var _Type = entity_deindex(_tile)
 				
 				if _Type == undefined {
-					if _tile != eEntity.Null log_warning($"GameState.setup: unknown tile type {_tile}")
+					if _tile != eEntity.Null 
+						log_warning($"GameState.setup: unknown tile type {_tile}")
 					continue
 				}
 				
@@ -41,6 +42,23 @@ function GameState() constructor {
 		
 		return self
 		
+	}
+
+	///@arg {Struct.Entity, Function} _type
+	///@return {Array<Struct.Entity>}
+	static get = function (_type) {
+		var _out = []
+		if typeof(_type) == "struct" {
+			for (var i = 0; i < array_length(entities); i++) {
+				if entities[i] == _type array_push(_out, _type)
+			}
+			return _out
+		}
+		// assume the type is a constructor
+		for (var i = 0; i < array_length(entities); i++) {
+			if is_instanceof(entities[i], _type) array_push(_out, entities[i])
+		}
+		return _out
 	}
 	
 	static collision = function (_x, _y) {
