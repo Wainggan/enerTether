@@ -13,14 +13,14 @@ function round_ext(_value,_round) {
 	return round(_value / _round) * _round;
 }
 
-function map(val, start1, end1, start2, end2) {
-	var prop = (val - start1)/(end1-start1);
-	return prop*(end2-start2) + start2;
+function map(_val, _start1, _end1, _start2, _end2) {
+	var _prop = (_val - _start1)/(_end1-_start1);
+	return _prop*(_end2-_start2) + _start2;
 }
 
 function wave(_from, _to, _duration, _offset = 0, _time = current_time * 0.001) {
-	var a4 = (_from - _to) * 0.5;
-	return _to + a4 + sin((((_time) + _duration * _offset) / _duration) * (pi*2)) * a4;
+	var _a4 = (_from - _to) * 0.5;
+	return _to + _a4 + sin((((_time) + _duration * _offset) / _duration) * (pi*2)) * _a4;
 }
 
 function wrap(_value,_min,_max) {
@@ -34,6 +34,6 @@ function chance(_percent) {
 	return _percent > random(1);
 }
 
-function parabola(p1, p2, y, x) {
-  return -(y / power((p1 - p2) / 2, 2)) * (x - p1) * (x - p2)
+function parabola(_p1, _p2, _y, _x) {
+  return -(_y / power((_p1 - _p2) / 2, 2)) * (_x - _p1) * (_x - _p2)
 }
