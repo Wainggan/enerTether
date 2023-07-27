@@ -1,5 +1,5 @@
 
-/// @desc	struct representing the current state of a level. does not contain game logic.
+/// @desc	struct representing the current state of a level. does not contain game logic (its a bit dumb)
 function GameState() constructor {
 	
 	static __total = 0
@@ -11,6 +11,8 @@ function GameState() constructor {
 	
 	entities = []
 	
+	///@desc sets up the current level
+	///@arg {Id.Layer} _datalayer layer id of the level tiles
 	static setup = function (_datalayer) {
 		
 		var _tilemap = layer_tilemap_get_id(_datalayer)
@@ -44,6 +46,7 @@ function GameState() constructor {
 		
 	}
 
+	///@desc get all entities of a type
 	///@arg {Struct.Entity, Function, Array<Function>} _type
 	///@return {Array<Struct.Entity>}
 	static get = function (_type) {
@@ -64,6 +67,8 @@ function GameState() constructor {
 		return _out
 	}
 	
+	///@desc destroys all entities of a type
+	///@arg {Struct.Entity, Function, Array<Function>} _type
 	static destroy = function (_type) {
 		var _list = get(_type)
 		for (var i = 0; i < array_length(entities); i++) {
@@ -76,6 +81,7 @@ function GameState() constructor {
 		}
 	}
 	
+	///@desc check if there is a collidable entity at a coordinate
 	///@return {Struct.Entity, Undefined}
 	static collision = function (_x, _y) {
 		for (var i = 0; i < array_length(entities); i++) {
@@ -84,12 +90,14 @@ function GameState() constructor {
 		return undefined
 	}
 	
+	///@desc calls all entity's update method
 	static update = function(_delta) {
 		for (var i = 0; i < array_length(entities); i++) {
 			entities[i].onstep(_delta)
 		}
 	}
 	
+	///@desc calls all entity's draw method
 	static draw = function(_delta) {
 		for (var i = 0; i < array_length(entities); i++) {
 			var _lastC = draw_get_color()
