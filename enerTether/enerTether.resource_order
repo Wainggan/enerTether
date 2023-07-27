@@ -17,6 +17,7 @@
     {"name":"scr_useful","order":14,"path":"scripts/scr_useful/scr_useful.yy",},
     {"name":"scr_def_macros","order":12,"path":"scripts/scr_def_macros/scr_def_macros.yy",},
     {"name":"scr_game","order":9,"path":"scripts/scr_game/scr_game.yy",},
+    {"name":"scr_Hole","order":6,"path":"scripts/scr_Hole/scr_Hole.yy",},
     {"name":"scr_input","order":18,"path":"scripts/scr_input/scr_input.yy",},
     {"name":"game","order":2,"path":"objects/game/game.yy",},
     {"name":"scr_def_entities","order":11,"path":"scripts/scr_def_entities/scr_def_entities.yy",},

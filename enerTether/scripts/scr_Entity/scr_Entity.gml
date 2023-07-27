@@ -8,6 +8,10 @@ function Entity(_state, _x = 0, _y = 0) constructor {
 	
 	state = _state
 	
+	static destroy = function () {
+		state.destroy(self)
+	}
+	
 	/// @desc check if a position overlaps the entity
 	static collision = function(_x, _y) {
 		return _x == x && _y == y

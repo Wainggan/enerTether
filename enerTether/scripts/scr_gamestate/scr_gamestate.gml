@@ -64,6 +64,18 @@ function GameState() constructor {
 		return _out
 	}
 	
+	static destroy = function (_type) {
+		var _list = get(_type)
+		for (var i = 0; i < array_length(entities); i++) {
+			for (var j = 0; j < array_length(_list); j++) {
+				if entities[i] == _list[j] {
+					array_delete(entities, i--, 1)
+					array_delete(_list, j--, 1)
+				}
+			}
+		}
+	}
+	
 	///@return {Struct.Entity, Undefined}
 	static collision = function (_x, _y) {
 		for (var i = 0; i < array_length(entities); i++) {

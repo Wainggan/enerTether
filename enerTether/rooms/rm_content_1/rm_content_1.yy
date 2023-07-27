@@ -11,13 +11,10 @@
   "layers": [
     {"resourceType":"GMRInstanceLayer","resourceVersion":"1.0","name":"Instances","depth":0,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":true,"inheritSubLayers":true,"inheritVisibility":true,"instances":[],"layers":[],"properties":[],"userdefinedDepth":false,"visible":true,},
     {"resourceType":"GMRTileLayer","resourceVersion":"1.1","name":"Tiles","depth":100,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":true,"inheritLayerSettings":true,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"properties":[],"tiles":{"SerialiseHeight":8,"SerialiseWidth":8,"TileCompressedData":[
--9,3,-2,0,15,3,0,-2147483648,
--2147483648,3,3,0,0,8,0,3,
-0,3,3,2,-5,0,-2,3,
--3,0,15,3,0,0,3,3,
--2147483648,0,0,8,0,0,3,3,
-0,0,-3,3,1,0,-9,3,
-],"TileDataFormat":1,},"tilesetId":{"name":"tl_editorTiles","path":"tilesets/tl_editorTiles/tl_editorTiles.yy",},"userdefinedDepth":false,"visible":true,"x":0,"y":0,},
+-13,0,-2,-2147483648,-10,0,2,2,
+0,-3,8,-7,0,1,9,-3,
+0,4,-2147483648,0,0,9,-6,0,
+1,9,-12,0,],"TileDataFormat":1,},"tilesetId":{"name":"tl_editorTiles","path":"tilesets/tl_editorTiles/tl_editorTiles.yy",},"userdefinedDepth":false,"visible":true,"x":0,"y":0,},
   ],
   "parent": {
     "name": "rooms",
