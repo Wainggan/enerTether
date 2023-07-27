@@ -1,3 +1,7 @@
+///@desc returns value closer to _b by _amount, never exceeding +/-_b
+///@arg {Real} _a start value
+///@arg {Real} _b target value
+///@arg {Real} _amount increment
 function approach(_a, _b, _amount) {
 	if (_a < _b)
 	    return min(_a + _amount, _b); 

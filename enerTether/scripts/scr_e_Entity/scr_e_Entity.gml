@@ -8,6 +8,7 @@ function Entity(_state, _x = 0, _y = 0) constructor {
 	
 	state = _state
 	
+	///@desc destroys this entity
 	static destroy = function () {
 		state.destroy(self)
 	}
@@ -17,9 +18,12 @@ function Entity(_state, _x = 0, _y = 0) constructor {
 		return _x == x && _y == y
 	}
 	
-	/// @desc to be run on every frame
+	/// @desc method that gets called every frame
+	///@arg {Real} deltatime
 	static onstep = function(_delta) {}
 	
+	///@desc method that gets called every frame, after step
+	///@arg {Real} deltatime
 	static ondraw = function(_delta) {
 		var _pad = 1/game.camera.zoom
 	

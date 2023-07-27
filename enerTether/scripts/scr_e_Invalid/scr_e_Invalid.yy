@@ -1,7 +1,7 @@
 {
   "resourceType": "GMScript",
   "resourceVersion": "1.0",
-  "name": "scr_Hole",
+  "name": "scr_e_Invalid",
   "isCompatibility": false,
   "isDnD": false,
   "parent": {
